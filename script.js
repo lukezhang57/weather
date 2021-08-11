@@ -19,7 +19,7 @@ function displayWeather(details){
     document.querySelector('.weather').style.display = 'block';
     document.getElementById('city').innerHTML =  `${details.name}, ${details.sys.country}`;
     document.getElementById('temp').innerHTML =  `${Math.round(details.main.temp)}&deg;F`;
-    document.getElementById('condition').innerHTML =  `${details.weather[0].main}`;
+    document.getElementById('condition').innerHTML =  `${details.weather[0].description.charAt(0).toUpperCase() + details.weather[0].description.substring(1)}`;
     let condition = details.weather[0].main;
     let icon = document.getElementById('icon')
     let prevIcon = icon.className;
