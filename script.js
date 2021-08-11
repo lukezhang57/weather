@@ -17,5 +17,5 @@ function getWeather(city){
 
 function displayWeather(details){
     document.querySelector('.weather').style.display = 'block';
-    document.querySelector('.temp').innerText =  `${details.station}`;
+    document.querySelector('.temp').innerHTML =  `${Math.round(details.main.temp)}&deg;F`;
 }
