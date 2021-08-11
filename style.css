@@ -1,0 +1,46 @@
+body {
+    font-family: 'Darker Grotesque';
+    background-color:  white;
+    line-height: 1.5;
+    user-select: none;
+}
+
+.header1{
+    font-size: 96px;
+    border-bottom:  4px solid#33ccff;
+    margin: 25px;
+}
+.weathercontainer {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.temp{
+    font-size: 48px;
+    margin: 25px;
+}
+
+.input {
+    border: none;
+    outline: none;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    font-family: 'Poppins';
+}
+
+.weather {
+    position: relative;
+    text-align: center;
+    display: block;
+}
+.content{
+    position: relative;
+}
