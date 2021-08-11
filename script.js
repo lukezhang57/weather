@@ -40,4 +40,5 @@ function displayWeather(details){
         prevIcon = newIcon;
     }
     icon.className = icon.className.replace(prevIcon,newIcon);
+    document.getElementById('humidity').innerHTML = `${details.main.humidity}% humidity`
 }
