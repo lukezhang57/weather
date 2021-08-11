@@ -23,7 +23,6 @@ body {
 }
 .temp{
     font-size: 54px;
-    margin: 25px;
 }
 
 .input {
@@ -34,13 +33,27 @@ body {
     font-weight: bold;
     display: inline-block;
     font-family: 'Poppins';
+    margin-bottom: 25px;
 }
 
 .weather {
     position: relative;
     text-align: center;
-    display: block;
+    display: hidden;
 }
 .content{
     position: relative;
+}
+
+.city {
+    font-size: 48px;
+    margin: 25px;
+}
+
+#icon{
+    font-size: 64px;
+}
+
+.condition{
+    font-size: 36px;
 }
