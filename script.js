@@ -50,7 +50,7 @@ function displayWeather(details){
     else if (condition === 'snow'){
         newIcon = 'far fa-snowflake'
     }
-    else if (condition === 'mist'){
+    else if (condition === 'mist' || condition === 'haze' || condition === 'smoke'){
         newIcon = 'fas fa-smog'
     }
     else {
