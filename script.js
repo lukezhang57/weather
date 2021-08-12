@@ -3,6 +3,11 @@ const api = {
     base: "https://api.openweathermap.org/data/2.5/weather?"
 };
 
+const aqiAPI = {
+    key: '696fff8018a6af85b97c1087d1edf1a2',
+    base: "http://api.openweathermap.org/data/2.5/air_pollution?"
+}
+
 const input = document.getElementById('input')
 input.addEventListener("keypress", function(event){
     if (event.key === "Enter"){
@@ -44,4 +49,27 @@ function displayWeather(details){
     }
     icon.className = icon.className.replace(prevIcon,newIcon);
     document.getElementById('humidity').innerHTML = `${details.main.humidity}% humidity`
+    const fetchPromise = fetch(aqiAPI.base + 'lat='+lat+'&lon='+ long+ '&appid='+aqiAPI.key)
+    fetchPromise.then((data) => { return data.json()}).then(displayAQI)
+}
+
+function displayAQI(data){
+    let level;
+    let aqi = data.list[0].main.aqi;
+    if (aqi === 1){
+        level = "(Good)";
+    }
+    else if (aqi === 2){
+        level = "(Fair)"
+    }
+    else if (aqi === 3){
+        level = "(Moderate)"
+    }
+    else if (aqi === 4){
+        level = "(Poor)"
+    }
+    else {
+        level = "(Very Poor)"
+    }
+    document.getElementById('aqi').innerHTML = `AQI Level: ${data.list[0].main.aqi}` + " " + level;
 }
