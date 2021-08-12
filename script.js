@@ -38,7 +38,7 @@ function displayWeather(details){
     else if (condition === 'moderate rain' || condition === 'rain' || condition === 'light rain'){
         newIcon = 'fas fa-cloud-rain';
     }
-    else if (condition === 'shower rain' || condition === 'heavy intensity rain'){
+    else if (condition === 'shower rain' || condition === 'heavy intensity rain' || condition === 'heavy intensity shower rain'){
         newIcon = 'fas fa-cloud-showers-heavy'
     }
     else if (condition === 'few clouds' || condition === 'broken clouds' || condition === 'scattered clouds'){
