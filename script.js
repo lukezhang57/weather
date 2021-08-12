@@ -44,7 +44,7 @@ function displayWeather(details){
     else if (condition === 'few clouds' || condition === 'broken clouds' || condition === 'scattered clouds'){
         newIcon = 'fas fa-cloud-sun';
     }
-    else if (condition === 'thunderstorm'){
+    else if (condition === 'thunderstorm' || condition === 'thunderstorm with heavy rain'){
         newIcon = 'fas fa-bolt';
     }
     else if (condition === 'snow'){
