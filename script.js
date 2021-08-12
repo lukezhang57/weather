@@ -49,6 +49,10 @@ function displayWeather(details){
     }
     icon.className = icon.className.replace(prevIcon,newIcon);
     document.getElementById('humidity').innerHTML = `${details.main.humidity}% humidity`
+    getAQI(details.coord.lat,details.coord.lon);
+}
+
+function getAQI(lat, long){
     const fetchPromise = fetch(aqiAPI.base + 'lat='+lat+'&lon='+ long+ '&appid='+aqiAPI.key)
     fetchPromise.then((data) => { return data.json()}).then(displayAQI)
 }
