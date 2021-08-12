@@ -47,6 +47,12 @@ function displayWeather(details){
     else if (condition === 'thunderstorm'){
         newIcon = 'fas fa-bolt';
     }
+    else if (condition === 'snow'){
+        newIcon = 'far fa-snowflake'
+    }
+    else if (condition === 'mist'){
+        newIcon = 'fas fa-smog'
+    }
     else {
         prevIcon = newIcon;
     }
