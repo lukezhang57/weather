@@ -27,6 +27,9 @@ function displayWeather(details){
     if (condition === 'Clear'){
         newIcon = 'far fa-sun';
     }
+    else if (details.weather[0].description === 'overcast clouds'){
+        newIcon = 'fas fa-cloud';
+    }
     else if (condition == 'Rain'){
         newIcon = 'fas fa-cloud-rain';
     }
