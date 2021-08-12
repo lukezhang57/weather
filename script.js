@@ -25,23 +25,26 @@ function displayWeather(details){
     document.getElementById('city').innerHTML =  `${details.name}, ${details.sys.country}`;
     document.getElementById('temp').innerHTML =  `${Math.round(details.main.temp)}&deg;F`;
     document.getElementById('condition').innerHTML =  `${details.weather[0].description.charAt(0).toUpperCase() + details.weather[0].description.substring(1)}`;
-    let condition = details.weather[0].main;
+    let condition = details.weather[0].description;
     let icon = document.getElementById('icon')
     let prevIcon = icon.className;
     let newIcon;
-    if (condition === 'Clear'){
+    if (condition === 'clear sky'){
         newIcon = 'far fa-sun';
     }
-    else if (details.weather[0].description === 'overcast clouds'){
+    else if (condition === 'overcast clouds'){
         newIcon = 'fas fa-cloud';
     }
-    else if (condition == 'Rain'){
+    else if (condition === 'moderate rain' || condition === 'rain'){
         newIcon = 'fas fa-cloud-rain';
     }
-    else if (condition == 'Clouds'){
+    else if (condition === 'shower rain'){
+        newIcon = 'fas fa-cloud-showers-heavy'
+    }
+    else if (condition === 'few clouds' || condition === 'broken clouds' || condition === 'scattered clouds'){
         newIcon = 'fas fa-cloud-sun';
     }
-    else if (condition == 'Thunderstorm'){
+    else if (condition === 'thunderstorm'){
         newIcon = 'fas fa-bolt';
     }
     else {
