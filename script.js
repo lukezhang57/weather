@@ -35,7 +35,7 @@ function displayWeather(details){
     else if (condition === 'overcast clouds'){
         newIcon = 'fas fa-cloud';
     }
-    else if (condition === 'moderate rain' || condition === 'rain'){
+    else if (condition === 'moderate rain' || condition === 'rain' || condition === 'light rain'){
         newIcon = 'fas fa-cloud-rain';
     }
     else if (condition === 'shower rain'){
