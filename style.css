@@ -2,8 +2,11 @@ body {
     font-family: 'Darker Grotesque';
     background-color:  white;
     line-height: 1.5;
-    user-select: none;
 }
+::selection {
+    background-color:#33ccff;
+    color: #fff;
+  }
 
 .header1{
     font-size: 96px;
