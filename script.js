@@ -5,7 +5,7 @@ const api = {
 
 const aqiAPI = {
     key: '696fff8018a6af85b97c1087d1edf1a2',
-    base: "http://api.openweathermap.org/data/2.5/air_pollution?"
+    base: "https://api.openweathermap.org/data/2.5/air_pollution?"
 }
 
 const input = document.getElementById('input')
